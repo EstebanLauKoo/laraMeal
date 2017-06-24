@@ -27,3 +27,5 @@ Route::resource('/meals', 'MealsController');
 
 Route::post('/meals/{meal}/foods', 'FoodsController@store');
 
+
+
