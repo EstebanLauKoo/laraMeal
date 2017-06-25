@@ -19,3 +19,5 @@ if ($uri !== '/' && file_exists(__DIR__.'/public'.$uri)) {
 }
 
 require_once __DIR__.'/public/index.php';
+
+mysql://gfegrsonza73g2mz:n63vure3b3124aqo@lg7j30weuqckmw07.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/srj87mwyk5bl4d8w
