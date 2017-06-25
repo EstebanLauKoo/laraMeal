@@ -11,15 +11,7 @@
 |
 */
 
-//Route::get('/', 'WelcomeController@index');
-
 Route::get('/', 'WelcomeController@index');
-
-Route::auth();
-
-Route::get('/logout', 'LoginController@logout');
-
-Route::get('/home', 'HomeController@index');
 
 Route::post('/users/{user}/meals', 'MealsController@store');
 
@@ -27,5 +19,6 @@ Route::resource('/meals', 'MealsController');
 
 Route::post('/meals/{meal}/foods', 'FoodsController@store');
 
+Auth::routes();
 
-
+Route::get('/home', 'HomeController@index')->name('home');
