@@ -44,7 +44,15 @@
              *   styles--directly.
              */
         }
-
+        .logout-a {
+            display: block;
+            padding: 3px 20px;
+            clear: both;
+            font-weight: normal;
+            line-height: 1.42857143;
+            color: #333333;
+            white-space: nowrap;
+        }
         @yield('extra-style')
     </style>
 </head>
@@ -88,9 +96,9 @@
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" >{{ csrf_field() }}
+                                        <a class="logout-a" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                    </form>
                                 </li>
                             </ul>
                         </li>
