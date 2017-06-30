@@ -27,8 +27,7 @@ class HomeController extends Controller
         //   hit this route if authenticated.
         $user  = $request->user();
         $meals = $user->meals()
-            //->whereDate('created_at', '=', Carbon::today()->toDateString())
-            ->get();
+                ->get();
         return view('home', compact('user', 'meals'));
     }
 }
